@@ -6,6 +6,7 @@ import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form'
 import { router } from "expo-router";
+import { userDataStore } from "@/store/data";
 
 const schema = z.object({
     name: z.string().min(1, {message: "O nome é obrigatório!"}),
@@ -22,7 +23,15 @@ export default function Step() {
         resolver: zodResolver(schema)
     })
 
+    const setPageOne = userDataStore(state => state.setPageOne);
+
     function handleCreate(data: FormData) {
+        setPageOne({
+            name: data.name,
+            weight: data.weight,
+            age: data.age,
+            height: data.height
+        })
         router.push('/create')
     }
 
