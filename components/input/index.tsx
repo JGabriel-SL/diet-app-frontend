@@ -1,5 +1,6 @@
-import {View, StyleSheet, TextInput, KeyboardTypeOptions} from 'react-native';
+import {View, StyleSheet, TextInput, KeyboardTypeOptions, Text} from 'react-native';
 import { Controller } from 'react-hook-form';
+import { colors } from "../../constants/colors";
 
 interface InputProps {
     name: string;
@@ -17,7 +18,7 @@ export function Input({name, control, placeholder, rules, error, keyboardType} :
                 name={name}
                 rules={rules}
                 render={({ field: { onChange, onBlur, value }}) => (
-                    <TextInput
+                    <TextInput style={styles.input}
                      placeholder={placeholder}
                      onBlur={onBlur}
                      value={value}
@@ -25,9 +26,11 @@ export function Input({name, control, placeholder, rules, error, keyboardType} :
                      keyboardType={keyboardType}
                     />
                   )}
-
-                
             />
+            
+            {error && 
+                <Text style={styles.errorText}>{error}</Text>
+            }
         </View>
     );
 }
@@ -35,5 +38,15 @@ export function Input({name, control, placeholder, rules, error, keyboardType} :
 const styles = StyleSheet.create({
     container: {
         marginBottom: 16
+    },
+    input: {
+        height: 44,
+        backgroundColor: colors.white,
+        borderRadius: 8,
+        paddingHorizontal: 10
+    },
+    errorText: {
+        color: 'red',
+        marginTop: 4
     }
 });
