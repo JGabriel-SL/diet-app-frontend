@@ -20,6 +20,12 @@ export default function RootLayout() {
         options={{
         headerShown: false
       }}/>
+
+      <Stack.Screen 
+        name="nutrition/index" 
+        options={{
+        headerShown: false
+      }}/>
     </Stack>
   );
 }
