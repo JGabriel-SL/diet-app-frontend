@@ -43,17 +43,17 @@ export default function Create() {
     ]
 
     const levelOptions = [
-        { label: 'Sedentário (pouco ou nenhuma atividade física)', value: 'sedentario' },
-        { label: 'Levemente ativo (exercícios 1 a 3 vezes na semana)', value: 'levemente ativo'},
-        { label: 'Moderadamente ativo (exercícios 3 a 5 vezes)', value: 'moderamente ativo'},
-        { label: 'Altamente ativo (exercícios 6 a 7 vezes)', value: 'altamente ativo'}
+        { label: 'Sedentário (pouco ou nenhuma atividade física)', value: 'Sedentario' },
+        { label: 'Levemente ativo (exercícios 1 a 3 vezes na semana)', value: 'Levemente ativo'},
+        { label: 'Moderadamente ativo (exercícios 3 a 5 vezes)', value: 'Moderamente ativo'},
+        { label: 'Altamente ativo (exercícios 6 a 7 vezes)', value: 'Altamente ativo'}
     ]
 
     const objectiveOptions = [
-        { label: 'Emagrecer', value: 'emagrecer' },
-        { label: 'Hipertrofia', value: 'hipertrofia'},
-        { label: 'Hipertrofia + Definição', value: 'hipertrofia e definição'},
-        { label: 'Definição', value: 'definição'}
+        { label: 'Emagrecer', value: 'Emagrecer' },
+        { label: 'Hipertrofia', value: 'Hipertrofia'},
+        { label: 'Hipertrofia + Definição', value: 'Hipertrofia e definição'},
+        { label: 'Definição', value: 'Definição'}
     ]
 
     return (

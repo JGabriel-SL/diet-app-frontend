@@ -75,7 +75,7 @@ export default function Step() {
                     control={control}
                     placeholder="Digite sua idade..."
                     error={errors.age?.message}
-                    keyboardType="default"
+                    keyboardType="numeric"
                 />
 
                 <Pressable style={styles.button} onPress={handleSubmit(handleCreate)}>

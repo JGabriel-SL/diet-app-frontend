@@ -24,6 +24,7 @@ export function Input({name, control, placeholder, rules, error, keyboardType} :
                      value={value}
                      onChangeText={onChange}
                      keyboardType={keyboardType}
+                     placeholderTextColor={colors.black}
                     />
                   )}
             />
@@ -43,7 +44,8 @@ const styles = StyleSheet.create({
         height: 44,
         backgroundColor: colors.white,
         borderRadius: 8,
-        paddingHorizontal: 10
+        paddingHorizontal: 10,
+        color: colors.black
     },
     errorText: {
         color: 'red',
